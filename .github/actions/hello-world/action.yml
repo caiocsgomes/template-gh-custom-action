@@ -1,0 +1,13 @@
+name: 'Hello world test'
+description: 'A test action'
+inputs:
+  user-name:
+    description: 'The name of the user to greet'
+    required: true
+    default: 'World'
+outputs:
+  greeting:
+    description: 'The greeting that was output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

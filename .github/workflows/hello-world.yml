@@ -1,0 +1,14 @@
+name: Hello World
+on: workflow_dispatch
+env:
+  USER_NAME: ${{ github.actor }}
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v2
+      - name: Hello World
+        uses: ./.github/actions/hello-world
+      - run: echo "The greeting was ${{ steps.hello-world.outputs.greeting }}"
+      
