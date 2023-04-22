@@ -10,5 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Hello World
         uses: ./.github/actions/hello-world
+        with:
+          user-name: ${{ env.USER_NAME }}
       - run: echo "The greeting was ${{ steps.hello-world.outputs.greeting }}"
       
