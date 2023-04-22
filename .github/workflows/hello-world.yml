@@ -11,7 +11,7 @@ jobs:
       - name: Hello World
         id: hello-world
         uses: ./.github/actions/hello-world
-        # with:
-        #   user-name: ${{ env.USER_NAME }}
+        with:
+          user-name: ${{ env.USER_NAME }}
       - run: echo "The greeting was ${{ steps.hello-world.outputs.greeting }}"
       
